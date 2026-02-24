@@ -1,0 +1,120 @@
+/* ===== EXPERIENCE — Flexbox Layout ===== */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 8px; bottom: 8px;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 36px;
+
+  /* Reveal animation */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -36px; top: 10px;
+  width: 13px; height: 13px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 14px rgba(232, 255, 71, 0.45);
+}
+
+/* Card — FLEXBOX column */
+.timeline-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  transition: border-color var(--transition), transform var(--transition);
+}
+.timeline-card:hover {
+  border-color: var(--accent-border);
+  transform: translateX(4px);
+}
+
+/* Header row — FLEXBOX between */
+.timeline-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.timeline-card__role {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.timeline-card__period {
+  font-size: 0.72rem;
+  padding: 3px 11px;
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+  border-radius: 100px;
+  white-space: nowrap;
+  font-weight: 500;
+  flex-shrink: 0;
+  height: fit-content;
+  margin-top: 3px;
+}
+
+.timeline-card__company {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+.timeline-card__company strong {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.timeline-card__project {
+  font-size: 0.78rem;
+  color: var(--text-sub);
+  font-style: italic;
+}
+
+.timeline-card__desc {
+  font-size: 0.87rem;
+  color: var(--text-sub);
+  line-height: 1.7;
+}
+
+/* Tech chips — FLEXBOX wrap */
+.tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.tech-chip {
+  font-size: 0.69rem;
+  padding: 3px 9px;
+  border-radius: 4px;
+  background: rgba(232, 255, 71, 0.08);
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
