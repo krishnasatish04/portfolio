@@ -26,8 +26,7 @@ export default function Hero() {
 
           {/* Description */}
           <p className="hero__desc">
-            10+ years crafting exceptional web experiences for Verizon, USAA, Synchrony,
-            Konica Minolta &amp; more. React specialist with deep expertise in state management,
+            10+ years crafting exceptional web experiences for HCL, Capaemini, Infosys, Hitachi vanatra &amp; more. React specialist with deep expertise in state management,
             testing, and scalable frontend architecture.
           </p>
 
