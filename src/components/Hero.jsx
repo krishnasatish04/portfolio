@@ -49,7 +49,7 @@ export default function Hero() {
           {/* Stats — flex row */}
           <div className="hero__stats">
             <div className="hero__stat">
-              <span className="hero__stat-num">10+</span>
+              <span className="hero__stat-num">10</span>
               <span className="hero__stat-label">Years Exp.</span>
             </div>
             <div className="hero__stat">
